@@ -28,7 +28,7 @@ The Green is the brainchild of a passionate group of individuals dedicated to pr
 
 - *Suprita Mondal*
 - *Sreya Chatterjee*
-- *Aman Jha (me)*
+- *Aman Jha*
 
 This project marks our first venture into creating a comprehensive online gardening resource. As a team, we are committed to continuous learning and improvement, and we appreciate your patience and support as we work towards perfecting The Green.
 

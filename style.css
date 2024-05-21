@@ -1,48 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-/* Back ground video css starts here  */
-.container{
-    width: 100%;
-    background-color:rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.content {
-    text-align: center;
+
+/* Back ground video css starts here */
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-.content h1
-{
-    font-size: 95px;
-    color:#fff;
-    margin-bottom: 50px;
-}
-.content a{
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 15px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-.content a:hover
-{
-    background-color: #fff;
-    color: #000;
-}
-.background-clip
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+.background-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 /* Back ground video css ends here */
+
+/* HEADER PART FOR LOGO CSS STARTS HERE */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(102, 139, 164, 0.8); /* Add some transparency */
+  min-height: 120px;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-bottom: 1px solid  rgb(254, 248, 248);
+}
+@media screen and (max-width: 600px) {
+  .header .logo {
+    font-size: 2rem;
+  }
+}
+.header > .logo {
+  font-size: 4rem;
+  overflow: hidden;
+}
+.header > .logo > a > em {
+  color: rgb(254, 255, 223);
+}
+.header > .logo > a {
+  text-decoration: none;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: rgb(221, 224, 171);
+  white-space: nowrap;
   
+}
+.header > .logo > a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(254, 248, 248);
+    bottom: 0;
+    left: 0;
+    animation: moveLine 8s linear infinite;
+}
+@keyframes moveLine {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* HEADER PART FOR LOGO CSS ENDS HERE */

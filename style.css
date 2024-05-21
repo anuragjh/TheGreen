@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 .background-clip {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -34,9 +34,8 @@
   background-color: rgba(102, 139, 164, 0.8); /* Add some transparency */
   min-height: 120px;
   width: 100%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-bottom: 1px solid  rgb(254, 248, 248);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+   border-bottom: 1px solid  rgb(254, 248, 248);
 }
 @media screen and (max-width: 600px) {
   .header .logo {
@@ -44,16 +43,17 @@
   }
 }
 .header > .logo {
-  font-size: 4rem;
+  font-size: 4.5rem;
   overflow: hidden;
 }
 .header > .logo > a > em {
-  color: rgb(254, 255, 223);
+  color: rgb(240, 240, 232);
 }
 .header > .logo > a {
   text-decoration: none;
-  font-family: "Merriweather", serif;
-  font-weight: 300;
+  font-family: "Almendra Display", serif;
+  font-weight: 800;
+  font-style:large;
   color: rgb(221, 224, 171);
   white-space: nowrap;
   
@@ -66,7 +66,7 @@
     background-color: rgb(254, 248, 248);
     bottom: 0;
     left: 0;
-    animation: moveLine 8s linear infinite;
+    animation: moveLine 5s linear infinite;
 }
 @keyframes moveLine {
     0% {

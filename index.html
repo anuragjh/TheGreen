@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TheGreen</title>
     <!-- google material icons link -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <!-- CSS EXTERNAL FILE LINK -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -13,41 +21,95 @@
     <!-- Back Ground Video starts here -->
     <div class="container">
       <video autoplay loop muted plays-inline class="background-clip">
-          <source src="video/potplant.mp4" type="video/mp4">
+        <source src="video/potplant.mp4" type="video/mp4" />
       </video>
       <!-- HEADER PART FOR LOGO STARTS HERE  -->
       <div class="header">
         <div class="logo">
-          <a href = "index.html">  <em>The </em>Green</a>
+          <a href="index.html"> <em>The </em>Green</a>
         </div>
       </div>
       <!-- HEADER PART FOR LOGO ENDS HERE -->
       <!-- QUOTE SECTION STARTS HERE -->
       <div class="quotes-container">
-        <div class="quote"><b><i>"</i> The best time to plant a tree was 20 years ago. The second best time is now.<i>"</i></b> 
+        <div class="quote">
+          <b
+            ><i>"</i> The best time to plant a tree was 20 years ago. The second
+            best time is now.<i>"</i></b
+          >
           <div class="Author">–Chinese Proverb</div>
         </div>
-        <div class="quote"><b><i>"</i>A society grows great when old men plant trees whose shade they know they shall never sit in.<i>"</i></b> 
+        <div class="quote">
+          <b
+            ><i>"</i>A society grows great when old men plant trees whose shade
+            they know they shall never sit in.<i>"</i></b
+          >
           <div class="Author">–Greek Proverb</div>
         </div>
         <div class="quote">
-        <b><i>"</i>Flowers always make people better, happier, and more helpful; they are sunshine, food, and medicine for the soul.<i>"</i></b> 
+          <b
+            ><i>"</i>Flowers always make people better, happier, and more
+            helpful; they are sunshine, food, and medicine for the soul.<i
+              >"</i
+            ></b
+          >
           <div class="Author">–Luther Burbank</div>
-          </div>
-        <div class="quote"><b><i>"</i>If you have a garden and a library, you have everything you need.<i>"</i></b> 
-          <div class="Author">–Marcus Tullius Cicero</div></div>
+        </div>
+        <div class="quote">
+          <b
+            ><i>"</i>If you have a garden and a library, you have everything you
+            need.<i>"</i></b
+          >
+          <div class="Author">–Marcus Tullius Cicero</div>
+        </div>
         <div class="navigation">
-          <button id="prevButton"><span class="material-symbols-outlined">
-            arrow_back_ios
-            </span></button>
-          <button id="nextButton"><span class="material-symbols-outlined">
-            arrow_forward_ios
-            </span></button>
+          <button id="prevButton">
+            <span class="material-symbols-outlined"> arrow_back_ios </span>
+          </button>
+          <button id="nextButton">
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
+          </button>
         </div>
       </div>
       <!-- QUOTE SECTION ENDS HERE -->
-  </div>
-  <!-- Back ground video ends here -->
-  <script src="script.js"></script>
+    </div>
+    <!-- Back ground video ends here -->
+    <!-- TIPS STARTS HERE -->
+    <div class="tcontainer">
+      <div class="tcontent">
+        <div class="ttext">
+          <h2>THE ULTIMATE GARDENING-BASED BEGINNER'S GUIDE</h2>
+          <p>
+            <strong>Not sure how to begin?</strong> Our free 20-page Ultimate
+            Beginner’s Guide walks you step-by-step through everything you need
+            to know to get started, including our most popular recipes!
+          </p>
+          <a
+            href="https://www.bhg.com/gardening/yard/garden-care/gardening-tips-for-every-gardener/"
+            class="guide-button"
+            >GUIDE ME !</a
+          >
+        </div>
+        <div class="video-box">
+          <video
+            id="guideVideo"
+            class="garden-vid"
+            controls
+            style="display: none"
+            poster=""
+          >
+            <source src="video/videoplayback.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <button id="playButton">
+              <i class="material-icons">play_arrow</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TIPS ENDS HERE -->
+    <!-- EXTERNAL SRIPT LINK -->
+    <script src="script.js"></script>
   </body>
 </html>

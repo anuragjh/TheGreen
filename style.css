@@ -26,7 +26,7 @@
 
 /* HEADER PART FOR LOGO CSS STARTS HERE */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: center;
@@ -38,6 +38,7 @@
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-bottom: 1px solid rgb(254, 248, 248);
+  z-index: 1000;
 }
 @media screen and (max-width: 600px) {
   .header .logo {
@@ -106,7 +107,7 @@
   display: none;
   font-size: 3.5rem;
   text-align: center;
-  padding: 50px;
+  padding: 180px;
   margin-bottom: 10px;
   color: rgb(104, 104, 104);
   opacity: 0;

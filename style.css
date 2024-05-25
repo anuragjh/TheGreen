@@ -85,43 +85,70 @@
 /* QUOTES CONTAINER CSS STARTS HERE */
 .quotes-container {
   position: absolute;
-  text-align: right;
+  text-align: center;
   color: rgb(2, 2, 2);
   font-size: 4.5rem;
   min-width: 100%;
   top: 30%;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .quote {
   display: none;
-  font-family: gilroy;
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 10px;
+  color: rgb(104, 104, 104);
+  opacity: 0;
+}
+
+.quote i{
+  font-size: 80px;
+  color:black;
+}
+
+.Author{
+  text-align: right;
+  margin-top: 10px;
 }
 
 .quote.active {
   display: block;
+  animation: slideUp 0.5s forwards;
 }
-
 .navigation {
- position: absolute;
- top: 250px;
- width: 100%;
- display: flex;
- justify-content: space-between;
- padding: 0 50px;
-
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 .navigation button {
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 0.5;
   border: none;
- display: flex;
- align-items: center;
- justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-} 
+}
+span {
+  color:  #02a58f;
+}
 .navigation button:hover {
   background-color: rgba(255, 255, 255, 1);
   opacity: 1;

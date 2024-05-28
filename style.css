@@ -4,8 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
-
 /* Back ground video css starts here */
 .container {
   width: 100%;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 .background-clip {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -30,9 +30,9 @@
   top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: rgba(99, 139, 164, 0.8);
-  min-height: 120px;
+  justify-content: space-between;
+  background-color: rgba(48, 133, 146, 0.8);
+  min-height: 70px;
   width: 100%;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -40,25 +40,26 @@
   border-bottom: 1px solid rgb(254, 248, 248);
   z-index: 1000;
 }
-@media screen and (max-width: 600px) {
-  .header .logo {
-    font-size: 2rem;
-  }
-}
 .header > .logo {
-  font-size: 4.5rem;
   overflow: hidden;
+  padding-left: 20px;
 }
 .header > .logo > a > em {
   color: rgb(240, 240, 232);
 }
 .header > .logo > a {
   text-decoration: none;
+  font-size: 2.5rem;
   font-family: "Almendra Display", serif;
   font-weight: 800;
   font-style: large;
   color: rgb(221, 224, 171);
   white-space: nowrap;
+}
+@media (max-width: 800px) {
+  .header > .logo > a {
+    font-size: 3rem;
+  }
 }
 .header > .logo > a::after {
   content: "";
@@ -81,6 +82,27 @@
     transform: translateX(0);
   }
 }
+.header-menu
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+}
+.header-options{
+  padding: 7px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.header-options span
+{
+  font-size: 2.5rem !important;
+  color: #f8f8f8;
+  transition: all ease-in 0.3s;
+ &&:hover{
+  font-weight: 900;
+ }
+}
 /* HEADER PART FOR LOGO CSS ENDS HERE */
 
 /* QUOTES CONTAINER CSS STARTS HERE */
@@ -88,7 +110,6 @@
   position: absolute;
   text-align: center;
   color: rgb(2, 2, 2);
-  font-size: 4.5rem;
   min-width: 100%;
   top: 30%;
 }
@@ -112,19 +133,44 @@
   color: rgb(104, 104, 104);
   opacity: 0;
 }
-
-.quote i{
+@media (max-width: 1080px) {
+  .quote {
+    font-size: 3rem;
+    padding-bottom: 550px;
+  }
+}
+@media (max-width: 600px) {
+  .quote {
+    font-size: 2rem;
+    padding-top: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .quote {
+    font-size: 1.5rem;
+    padding-top: 0px;
+  }
+}
+@media (max-width: 300px) {
+  .quote {
+    font-size: 1rem;
+    padding-top: 0px;
+  }
+}
+.quote i {
   font-size: 80px;
-  color:black;
+  color: black;
 }
 
-.Author{
+.Author {
   text-align: right;
   margin-top: 10px;
 }
 
 .quote.active {
   display: block;
+  justify-content: center;
+  align-items: center;
   animation: slideUp 0.5s forwards;
 }
 .navigation {
@@ -147,13 +193,13 @@
   width: 40px;
   border-radius: 50%;
 }
-span {
-  color:  #02a58f;
+.navigation >button > span {
+  color: #02a58f;
 }
 .navigation button:hover {
   background-color: rgba(255, 255, 255, 1);
   opacity: 1;
-} 
+}
 /* QUOTES CONTAINER CSS ENDS HERE */
 
 /* HEALTHY TIPS STARTS HERE */
@@ -163,6 +209,7 @@ span {
   justify-content: center;
   padding: 30px;
   background-color: rgb(253, 247, 186);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .tcontent {
   display: flex;
@@ -170,7 +217,7 @@ span {
   justify-content: space-evenly;
 }
 .tcontainer .ttext {
-  font-family: gilroy;
+  font-family: "Century Gothic", "Lato", sans-serif;
   max-width: 40%;
 }
 .tcontainer .ttext h2 {
@@ -215,7 +262,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .tcontainer .video-overlay button {
@@ -225,4 +272,272 @@ span {
   font-size: 3rem;
 }
 
-/* HEALTHY TIPS ENDS HERE */
+/* HEALTHY TIPS ENDS HERE */
+
+/* NAV-BAR STARTS HERE */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+.nav-options {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: color 0.5s ease;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+.nav-options::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(99, 139, 164, 0.8);
+  z-index: -1;
+  transition: none;
+}
+
+.nav-options:hover::before {
+  animation: wave 0.5s forwards;
+}
+
+.nav-options:hover {
+  color: white;
+}
+
+.nav-options::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(99, 139, 164, 0.8);
+  z-index: -1;
+  animation: reverseWave 0.5s forwards;
+  opacity: 0;
+}
+
+.nav-options:hover::after {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes reverseWave {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.nav-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66b1f1;
+  transition: left 0.3s ease;
+}
+@media (min-width: 800px) {
+  .nav-options {
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  .nav-options {
+    font-size: 1rem;
+  }
+}
+/* NAV-BAR ENDS HERE */
+
+/* ROUND CARDS SECTION STARTS HERE */
+.round-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #f9f9f9;
+}
+
+.round-card {
+  text-align: center;
+  flex: 1 1 150px;
+}
+.round-card >a{
+  text-decoration: none;
+}
+.round-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid #f0c0c0;
+  border-radius: 50%;
+  transition: all ease 1s;
+}
+.round-card:hover img{
+  scale:1.2;
+}
+
+.round-card p {
+  margin-top: 15px;
+  color: #333;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .round-card {
+    flex: 1 1 100%;
+  }
+
+  .round-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ROUND CARDS SECTION ENDS HERE */
+
+/* KNOW MORE ABOUT PLANTS STARTS HERE */
+.recipes-section {
+  padding: 30px 20px;
+  background-color: #d2e8b4;
+  border-radius: 8px;
+  margin: 30px auto;
+  text-align: center;
+  max-width: 1200px;
+  box-shadow: 4px 0px 50px -93px rgba(0, 0, 0, 0.6),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.recipes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-radius: 25px 0px 0px 25px;
+  border: none;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+.btn-search {
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-search > span {
+  color: #02a58f88;
+}
+
+.btn-search:hover {
+  transform: scale(1.05);
+  border: 1px solid #83916f;
+}
+
+.recipes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.recipe-card {
+  background-color: #ffffff7a;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.7s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-category {
+  font-size: 0.875rem;
+  color: #555;
+  padding: 10px;
+}
+
+.recipe-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0 10px 10px;
+}
+.recipe-card p {
+  text-align: center;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .recipes-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+}
+/* KNOW MORE ABOUT PLANTS ENDS HERE */
+.test {
+  height: 900px;
+}

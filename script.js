@@ -12,7 +12,7 @@ function showQuote(index) {
     if (i === index) {
       setTimeout(() => {
         quote.classList.add("active");
-      }, 50); // Slight delay to ensure the animation is applied
+      }, 50); 
     }
   });
 }
@@ -41,3 +41,29 @@ document.getElementById("playButton").addEventListener("click", function () {
     overlay.style.display = "none";
   }
 });
+
+function search() {
+  var searchTerm = document.getElementById('search').value;
+  var url = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=1&prop=extracts|pageimages&exintro&explaintext&pithumbsize=200&gsrsearch=" + searchTerm;
+
+  $.getJSON(url, function(data) {
+    var pages = data.query.pages;
+    var html = '';
+    for (var page in pages) {
+      html += '<div class="recipe-card">';
+      html += '<a href="https://en.wikipedia.org/?curid=' + pages[page].pageid + '" target="_blank">';
+      if (pages[page].thumbnail) {
+        html += '<img src="' + pages[page].thumbnail.source + '" alt="' + pages[page].title + '">';
+      } else {
+        html += '<img src="https://via.placeholder.com/300" alt="' + pages[page].title + '">';
+      }
+      html += '<div class="recipe-category">BY THE GREEN</div>';
+      html += '<div class="recipe-title">' + pages[page].title + '</div>';
+      html += '<p>' + pages[page].extract + '</p>';
+      html += '</a>';
+      html += '</div>';
+    }
+  
+    document.querySelector('.recipes-grid').innerHTML = html;
+  });
+}

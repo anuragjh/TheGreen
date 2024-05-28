@@ -13,12 +13,17 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20,200,0,-25" />
+   
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- CSS EXTERNAL FILE LINK -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Back Ground Video starts here -->
+    <section id="home">
     <div class="container">
       <video autoplay loop muted plays-inline class="background-clip">
         <source src="video/potplant.mp4" type="video/mp4" />
@@ -28,6 +33,20 @@
         <div class="logo">
           <a href="index.html"> <em>The </em>Green</a>
         </div>
+        <div class="header-menu">
+        <div class="header-options"> <span class="material-symbols-sharp">
+          shopping_bag
+          </span> 
+          </div>
+          <div class="header-options"><span class="material-symbols-sharp">
+            favorite
+            </span>
+            </div>
+        <div class="header-options"> <span class="material-symbols-sharp">
+          account_circle
+          </span>
+         </div>
+      </div>
       </div>
       <!-- HEADER PART FOR LOGO ENDS HERE -->
       <!-- QUOTE SECTION STARTS HERE -->
@@ -71,6 +90,7 @@
           </button>
         </div>
       </div>
+    </section>
       <!-- QUOTE SECTION ENDS HERE -->
     </div>
     <!-- Back ground video ends here -->
@@ -109,6 +129,106 @@
       </div>
     </div>
     <!-- TIPS ENDS HERE -->
+
+    <!-- NAV-BAR STARTS HERE -->
+    <div class="nav-container">
+      <a class="nav-options" href="index.html">HOME</a>
+      <a class="nav-options" href="#">SHOP</a>
+      <a class="nav-options" href="#">GOODIES</a>
+      <a class="nav-options" href="#know-plants">KNOW PLANTS</a>
+      <a class="nav-options" href="#">PROFILE</a>
+      <span class="nav-slider"></span>
+    </div>
+     <!-- NAV-BAR ENDS HERE -->
+
+<!-- ROUND CARDS SECTION STARTS HERE -->
+<div class="round-card-section">
+  <div class="round-card">
+    <a href="#">
+    <img
+      src="https://i.pinimg.com/originals/9a/e3/36/9ae3363effeff973a23de9344735cddc.jpg"
+      alt="Bestsellers"
+    />
+    <p>Bestsellers</p>
+  </a>
+  </div>
+  <div class="round-card">
+    <a href="#">
+    <img
+      src="https://i.pinimg.com/736x/dc/7f/4c/dc7f4cbeaaafc990a39da4a4e8d0d5af.jpg"
+      alt="INDOOR"
+    />
+    <p>INDOORS</p>
+    </a>
+  </div>
+  <div class="round-card">
+    <a href="#">
+    <img
+      src="https://th.bing.com/th/id/R.9a536b25508aea3a424a635603426a78?rik=gn1VRjSyZMmz0Q&riu=http%3a%2f%2fwww.fantasticviewpoint.com%2fwp-content%2fuploads%2f2016%2f09%2f357046775-634x617.jpg&ehk=XDEd2tcCbWa56Cp1EUmQv9Dj9NL9jBJm1DYB8nFKFJU%3d&risl=&pid=ImgRaw&r=0"
+      alt="OUTDOOR"
+    />
+    <p>OUTDOORS</p>
+    </a>
+  </div>
+  <div class="round-card">
+    <a href="#">
+    <img
+      src="https://blog.displate.com/wp-content/uploads/2021/10/Plant-ideas_plants-and-art-1-819x1024.jpg"
+      alt="DECORATION"
+    />
+    <p>DECORATION WITH PLANTS</p>
+    </a>
+  </div>
+  <div class="round-card">
+    <a href="#">
+    <img src="https://chicagolandgardening.com/wp-content/uploads/2023/08/how-to-get-seeds-to-sprout-1692522921.jpg" alt="SEEDS">
+    <p>SEEDS</p>
+    </a>
+</div>
+<div class="round-card">
+  <a href="#">
+    <img src="https://unlimitedgreens.com/cdn/shop/products/Money-Plant-In-Jute-Gift-Wrap.jpg?v=1679885823" alt="GIFTS">
+    <p>GIFTS</p>
+    </a>
+</div>
+
+</div>
+<!--ROUND CARDS SECTION ENDS HERE -->
+
+     <!-- KNOW MORE ABOUT PLANTS STARTS HERE -->
+     <section id="search-plant">
+     <div class="recipes-section" id="know-plants">
+      <h2>KNOW MORE ABOUT GREEN THINGS</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Search For Greenaries" id="search">
+        <button onclick="search()" class="btn-search"><span class="material-symbols-outlined">
+          search
+          </span></button>
+      </div>
+      <div class="recipes-grid">
+        <div class="recipe-card">
+          <img src="https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1551001666/vendor/3118/catalog/product/2/0/20161117031919_file_582d21b7890a3.jpg" alt="Recipe 1">
+          <div class="recipe-category">INDOOR BAMBOOS</div>
+          <div class="recipe-title">Lucky Bamboo</div>
+          <p>Dracaena sanderiana is a species of flowering plant in the family Asparagaceae, native to Central Africa. It was named after the German–English gardener Henry Frederick Conrad Sander (1847–1920).</p>
+        </div>
+        <div class="recipe-card">
+          <img src="https://th.bing.com/th/id/OIP.Kmfjvw0UL2t-Sp_lAmF_gwAAAA?rs=1&pid=ImgDetMain" alt="Recipe 2">
+          <div class="recipe-category">INDOOR PLANTS</div>
+          <div class="recipe-title">Spider Plant</div>
+          <p>Spider plant is a common name for several plants and may refer to: Chlorophytum comosum, the commonly cultivated houseplant Chlorophytum, a genus of plants in the asparagus family Saxifraga flagellaris, also known as whiplash saxifrage Cleome, a genus of flowering plants.</p>
+        </div>
+        <div class="recipe-card">
+          <img src="https://amongthelilacs.com/wp-content/uploads/2020/05/Peace-Lily-Bloom.jpg" alt="Recipe 3">
+          <div class="recipe-category">OUTDOOR PLANTS</div>
+          <div class="recipe-title">White Peace-Lily</div>
+          <p>Spathiphyllum is a genus of about 47 species of monocotyledonous flowering plants in the family Araceae, native to tropical regions of the Americas and southeastern Asia. Certain species of Spathiphyllum are commonly known as spath or peace lilies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+     <!-- KNOW MORE ABOUT PLANTS ENDS HERE -->
+     <div class="test"></div>
     <!-- EXTERNAL SRIPT LINK -->
     <script src="script.js"></script>
   </body>

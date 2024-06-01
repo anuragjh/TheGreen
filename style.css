@@ -442,7 +442,7 @@
 .recipes-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Arial, sans-serif;
 }
 
 .search-bar {
@@ -538,6 +538,307 @@
   }
 }
 /* KNOW MORE ABOUT PLANTS ENDS HERE */
+
+/* SHOPPING SECTION STARTS HERE */
+.shopping-section{
+  max-width: 1850px;
+  height: auto;
+  margin: 20px auto;
+  text-align: center;
+  padding: 30px 20px;
+}
+.shopping-header-section {
+  background-color: #f0fff6; 
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1600px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+.shopping-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-text {
+  text-align: left;
+  padding: 20px;
+  flex: 1;
+}
+
+.shopping-text h2 {
+  font-size: 1.5rem;
+  color: #2e7d32; 
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.shopping-text h1 {
+  font-size: 2.5rem;
+  color: #1b5e20; 
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.shopping-text p {
+  padding: 20px !important;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: #f2eeee;
+  font-family: Arial, sans-serif;
+  border-radius: 20px;
+  height: 30px;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-image {
+  flex: 1;
+  padding: 0px;
+}
+
+.shopping-image img {
+  width: 100%;
+  object-fit: contain;
+filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
+}
+
+/* DROPDOWN MENU STYLES */
+.dropdown {
+  position: relative;
+  display: inline-block;
+ margin-top: 10px;
+ width: 100px;
+  float: right;
+  right: 7%;
+}
+
+.dropbtn {
+  background-color: #4caf50; 
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* SHOPPING grid STARTS HERE */
+
+.shopping-grid {
+  margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 130px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #ffffff7a;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.7s ease, box-shadow 0.2s ease;
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffeb3b; 
+  color: #000;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.product-details {
+  padding: 15px;
+  text-align: left;
+}
+
+.product-details h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-stars {
+  color: #ffb400; 
+  margin-right: 5px;
+}
+
+.rating-value {
+  font-size: 0.875rem;
+  color: #4caf50; 
+}
+
+.product-price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  color: #4caf50; 
+}
+
+.product-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.product-button:hover {
+  background-color: #388e3c; 
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
+}
+
+.view-more-container {
+  text-align: center;
+  margin: 20px 0;
+
+}
+
+.view-more-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4caf50; 
+  color: white;
+}
+
+.product-card {
+  display: none;
+}
+
+.product-card.visible {
+  display: block;
+}
+
+.no-products {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-products img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-and-filter {
+  margin: 60px;
+}
+
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+/* SHOPPING GRID ENDS HERE */
+
+/* SHOPPING SECTION ENDS HERE */
+
+
+/* Additional Services Section Starts header */
+.additional-services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: #333;
+}
+/* Additional Services Section End */
 .test {
   height: 900px;
 }

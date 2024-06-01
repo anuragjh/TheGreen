@@ -133,7 +133,7 @@
     <!-- NAV-BAR STARTS HERE -->
     <div class="nav-container">
       <a class="nav-options" href="index.html">HOME</a>
-      <a class="nav-options" href="#">SHOP</a>
+      <a class="nav-options" href="#shop">SHOP</a>
       <a class="nav-options" href="#">GOODIES</a>
       <a class="nav-options" href="#know-plants">KNOW PLANTS</a>
       <a class="nav-options" href="#">PROFILE</a>
@@ -144,7 +144,7 @@
 <!-- ROUND CARDS SECTION STARTS HERE -->
 <div class="round-card-section">
   <div class="round-card">
-    <a href="#">
+    <a href="#bestseller">
     <img
       src="https://i.pinimg.com/originals/9a/e3/36/9ae3363effeff973a23de9344735cddc.jpg"
       alt="Bestsellers"
@@ -153,7 +153,7 @@
   </a>
   </div>
   <div class="round-card">
-    <a href="#">
+    <a href="#indoor">
     <img
       src="https://i.pinimg.com/736x/dc/7f/4c/dc7f4cbeaaafc990a39da4a4e8d0d5af.jpg"
       alt="INDOOR"
@@ -162,7 +162,7 @@
     </a>
   </div>
   <div class="round-card">
-    <a href="#">
+    <a href="#outdoor">
     <img
       src="https://th.bing.com/th/id/R.9a536b25508aea3a424a635603426a78?rik=gn1VRjSyZMmz0Q&riu=http%3a%2f%2fwww.fantasticviewpoint.com%2fwp-content%2fuploads%2f2016%2f09%2f357046775-634x617.jpg&ehk=XDEd2tcCbWa56Cp1EUmQv9Dj9NL9jBJm1DYB8nFKFJU%3d&risl=&pid=ImgRaw&r=0"
       alt="OUTDOOR"
@@ -171,7 +171,7 @@
     </a>
   </div>
   <div class="round-card">
-    <a href="#">
+    <a href="#decoration">
     <img
       src="https://blog.displate.com/wp-content/uploads/2021/10/Plant-ideas_plants-and-art-1-819x1024.jpg"
       alt="DECORATION"
@@ -180,13 +180,13 @@
     </a>
   </div>
   <div class="round-card">
-    <a href="#">
+    <a href="#seed">
     <img src="https://chicagolandgardening.com/wp-content/uploads/2023/08/how-to-get-seeds-to-sprout-1692522921.jpg" alt="SEEDS">
     <p>SEEDS</p>
     </a>
 </div>
 <div class="round-card">
-  <a href="#">
+  <a href="#gift">
     <img src="https://unlimitedgreens.com/cdn/shop/products/Money-Plant-In-Jute-Gift-Wrap.jpg?v=1679885823" alt="GIFTS">
     <p>GIFTS</p>
     </a>
@@ -195,39 +195,338 @@
 </div>
 <!--ROUND CARDS SECTION ENDS HERE -->
 
-     <!-- KNOW MORE ABOUT PLANTS STARTS HERE -->
-     <section id="search-plant">
-     <div class="recipes-section" id="know-plants">
-      <h2>KNOW MORE ABOUT GREEN THINGS</h2>
-      <div class="search-bar">
-        <input type="text" placeholder="Search For Greenaries" id="search">
-        <button onclick="search()" class="btn-search"><span class="material-symbols-outlined">
-          search
-          </span></button>
+<!-- Shopping Section Start -->
+<section class="shopping-section" id="shop">
+  <div class="shopping-header-section">
+    <div class="shopping-header">
+      <div class="shopping-text">
+        <h2>Embark on a Journey through our</h2>
+        <h1>Expansive Selection of Lush, Blooming, and Thriving Plants</h1>
+        <p>Plants starting at ₹249 &nbsp; • &nbsp; Premium quality healthy plants</p>
       </div>
-      <div class="recipes-grid">
-        <div class="recipe-card">
-          <img src="https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1551001666/vendor/3118/catalog/product/2/0/20161117031919_file_582d21b7890a3.jpg" alt="Recipe 1">
-          <div class="recipe-category">INDOOR BAMBOOS</div>
-          <div class="recipe-title">Lucky Bamboo</div>
-          <p>Dracaena sanderiana is a species of flowering plant in the family Asparagaceae, native to Central Africa. It was named after the German–English gardener Henry Frederick Conrad Sander (1847–1920).</p>
-        </div>
-        <div class="recipe-card">
-          <img src="https://th.bing.com/th/id/OIP.Kmfjvw0UL2t-Sp_lAmF_gwAAAA?rs=1&pid=ImgDetMain" alt="Recipe 2">
-          <div class="recipe-category">INDOOR PLANTS</div>
-          <div class="recipe-title">Spider Plant</div>
-          <p>Spider plant is a common name for several plants and may refer to: Chlorophytum comosum, the commonly cultivated houseplant Chlorophytum, a genus of plants in the asparagus family Saxifraga flagellaris, also known as whiplash saxifrage Cleome, a genus of flowering plants.</p>
-        </div>
-        <div class="recipe-card">
-          <img src="https://amongthelilacs.com/wp-content/uploads/2020/05/Peace-Lily-Bloom.jpg" alt="Recipe 3">
-          <div class="recipe-category">OUTDOOR PLANTS</div>
-          <div class="recipe-title">White Peace-Lily</div>
-          <p>Spathiphyllum is a genus of about 47 species of monocotyledonous flowering plants in the family Araceae, native to tropical regions of the Americas and southeastern Asia. Certain species of Spathiphyllum are commonly known as spath or peace lilies.</p>
-        </div>
+      <div class="shopping-image">
+        <img src="images/image1.png" alt="Vibrant Plants">
       </div>
     </div>
-  </section>
-     <!-- KNOW MORE ABOUT PLANTS ENDS HERE -->
+  </div>
+<!-- search plants -->
+<div class="search-and-filter">
+  <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for plants...">
+  <!-- Dropdown Menu -->
+  <div class="dropdown" id="drop">
+    <button class="dropbtn">Filter Products</button>
+    <div class="dropdown-content">
+      <a href="#drop" onclick="filterProducts('all')">All</a>
+      <a href="#drop" onclick="filterProducts('bestseller')">Bestsellers</a>
+      <a href="#drop" onclick="filterProducts('indoor')">Indoor</a>
+      <a href="#drop" onclick="filterProducts('outdoor')">Outdoor</a>
+      <a href="#drop" onclick="filterProducts('sale')">Sale</a>
+      <a href="#drop" onclick="filterProducts('seeds')">Seeds</a>
+      <a href="#drop" onclick="filterProducts('gifts')">Gifts</a>
+    </div>
+  </div>
+
+ <!-- Placeholder Image for No Products -->
+ <div class="no-products">
+  <img src="images/image.png" alt="No products available">
+  </div>
+
+
+  <div class="shopping-grid">
+    <!-- Product Card Start -->
+    <div class="product-card bestseller indoor sale visible">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Sale</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card bestseller visible">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Bestsellers</div>
+      </div>
+      <div class="product-details">
+        <h3>lily Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card bestseller visible">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Bestsellers</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor visible">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor visible">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card indoor ">
+      <div class="product-image">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353694766/SA/PL/QL/199530520/mini-jade-plant.jpg" alt="Jade Plant Mini">
+        <div class="product-label">Indoor</div>
+      </div>
+      <div class="product-details">
+        <h3>Jade Plant Mini</h3>
+        <div class="product-rating">
+          <span class="rating-stars">★ ★ ★ ★ ★</span>
+          <span class="rating-value">4.8</span>
+        </div>
+        <div class="product-price">
+          <span class="original-price">₹299</span>
+          <span class="discounted-price">From ₹249</span>
+        </div>
+        <button class="product-button">Add to cart</button>
+      </div>
+    </div>
+
+
+
+    <!-- Product Card End -->
+  </div>
+  <!-- View More Button -->
+<div class="view-more-container">
+  <button class="view-more-button" onclick="showMoreProducts()">View More</button>
+</div>
+</section>
+<!-- SHOPPING SECTION ENDS HERE -->
+
+<!-- Additional Services Section Start -->
+<section class="additional-services">
+  <div class="service-item">
+    <img src="https://w7.pngwing.com/pngs/126/839/png-transparent-call-centre-customer-service-computer-icons-help-desk-telephone-call-others-microphone-telephone-call-service.png" alt="Help Center">
+    <p>Help Center</p>
+  </div>
+  <div class="service-item">
+    <img src="https://static.thenounproject.com/png/3154344-200.png" alt="Track Order">
+    <p>Track Order</p>
+  </div>
+  <div class="service-item">
+    <img src="https://static.thenounproject.com/png/1902111-200.png" alt="trust">
+    <p>TRUSTED</p>
+  </div>
+  <div class="service-item">
+    <img src="https://static.thenounproject.com/png/958287-200.png" alt="Offers">
+    <p>Offers</p>
+  </div>
+</section>
+<!-- Additional Services Section End -->
+
+     <!-- KNOW MORE ABOUT PLANTS STARTS HERE -->
+     <section id="search-plant">
+      <div class="recipes-section" id="know-plants">
+       <h2>KNOW MORE ABOUT GREEN THINGS</h2>
+       <div class="search-bar">
+         <input type="text" placeholder="Search For Greenaries" id="search">
+         <button onclick="search()" class="btn-search"><span class="material-symbols-outlined">
+           search
+           </span></button>
+       </div>
+       <div class="recipes-grid">
+         <div class="recipe-card">
+           <img src="https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1551001666/vendor/3118/catalog/product/2/0/20161117031919_file_582d21b7890a3.jpg" alt="Recipe 1">
+           <div class="recipe-category">INDOOR BAMBOOS</div>
+           <div class="recipe-title">Lucky Bamboo</div>
+           <p>Dracaena sanderiana is a species of flowering plant in the family Asparagaceae, native to Central Africa. It was named after the German–English gardener Henry Frederick Conrad Sander (1847–1920).</p>
+         </div>
+         <div class="recipe-card">
+           <img src="https://th.bing.com/th/id/OIP.Kmfjvw0UL2t-Sp_lAmF_gwAAAA?rs=1&pid=ImgDetMain" alt="Recipe 2">
+           <div class="recipe-category">INDOOR PLANTS</div>
+           <div class="recipe-title">Spider Plant</div>
+           <p>Spider plant is a common name for several plants and may refer to: Chlorophytum comosum, the commonly cultivated houseplant Chlorophytum, a genus of plants in the asparagus family Saxifraga flagellaris, also known as whiplash saxifrage Cleome, a genus of flowering plants.</p>
+         </div>
+         <div class="recipe-card">
+           <img src="https://amongthelilacs.com/wp-content/uploads/2020/05/Peace-Lily-Bloom.jpg" alt="Recipe 3">
+           <div class="recipe-category">OUTDOOR PLANTS</div>
+           <div class="recipe-title">White Peace-Lily</div>
+           <p>Spathiphyllum is a genus of about 47 species of monocotyledonous flowering plants in the family Araceae, native to tropical regions of the Americas and southeastern Asia. Certain species of Spathiphyllum are commonly known as spath or peace lilies.</p>
+         </div>
+       </div>
+     </div>
+   </section>
+      <!-- KNOW MORE ABOUT PLANTS ENDS HERE -->
      <div class="test"></div>
     <!-- EXTERNAL SRIPT LINK -->
     <script src="script.js"></script>

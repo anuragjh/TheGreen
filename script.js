@@ -67,3 +67,85 @@ function search() {
     document.querySelector('.recipes-grid').innerHTML = html;
   });
 }
+
+
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product-card');
+  var noImg = document.querySelector('.noyhing-to-show');
+  let visibleCount = 0;
+
+  // Loop through the product cards
+  products.forEach((product) => {
+    // If 'all' is selected, show all products
+    if (category === 'all') {
+      product.style.display = 'block';
+      visibleCount++; 
+    } else {
+      // Otherwise, only show products that match the selected category
+      if (product.classList.contains(category)) {
+        product.style.display = 'block';
+        visibleCount++;
+      
+      } else {
+        product.style.display = 'none';
+        document.querySelector('.view-more-container').style.display = 'none';
+      }
+    }
+  });
+
+  const noProductsElement = document.querySelector('.no-products');
+  if (visibleCount === 0) {
+    noProductsElement.style.display = 'block';
+  } else {
+    noProductsElement.style.display = 'none';
+  }
+
+  // Update the dropdown button text to the selected category
+  document.querySelector('.dropbtn').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+}
+
+
+let productsToShow = 4;
+const products = document.querySelectorAll('.product-card');
+
+  function showMoreProducts() {
+    const totalProducts = products.length;
+    const currentlyVisibleProducts = document.querySelectorAll('.product-card.visible').length;
+    const nextBatchEnd = currentlyVisibleProducts + productsToShow;
+
+    for (let i = currentlyVisibleProducts; i < nextBatchEnd && i < totalProducts; i++) {
+      products[i].classList.add('visible');
+    }
+
+    if (nextBatchEnd >= totalProducts) {
+      document.querySelector('.view-more-container').style.display = 'none';
+    }
+  }
+
+
+
+  function searchProducts() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const products = document.querySelectorAll('.product-card');
+    let visibleCount = 0;
+  
+    products.forEach(product => {
+      const productName = product.querySelector('.product-details h3').innerText.toLowerCase();
+      if (productName.includes(searchInput)) {
+        product.classList.add('visible');
+        product.style.display = 'block';
+        visibleCount++;
+      } else {
+        product.classList.remove('visible');
+        product.style.display = 'none';
+      }
+    });
+  
+    // Check if there are any visible products
+    const noProductsElement = document.querySelector('.no-products');
+    if (visibleCount === 0) {
+      noProductsElement.style.display = 'block';
+    } else {
+      noProductsElement.style.display = 'none';
+    }
+  }

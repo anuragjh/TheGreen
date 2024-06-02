@@ -49,6 +49,7 @@
       </div>
       </div>
       <!-- HEADER PART FOR LOGO ENDS HERE -->
+      </div>
       <!-- QUOTE SECTION STARTS HERE -->
       <div class="quotes-container">
         <div class="quote">
@@ -131,7 +132,7 @@
     <!-- TIPS ENDS HERE -->
 
     <!-- NAV-BAR STARTS HERE -->
-    <div class="nav-container">
+    <div class="nav-container" id="navbar">
       <a class="nav-options" href="index.html">HOME</a>
       <a class="nav-options" href="#shop">SHOP</a>
       <a class="nav-options" href="#">GOODIES</a>
@@ -205,7 +206,7 @@
         <p>Plants starting at ₹249 &nbsp; • &nbsp; Premium quality healthy plants</p>
       </div>
       <div class="shopping-image">
-        <img src="images/image1.png" alt="Vibrant Plants">
+        <img src="images/shopping-header-img.png" alt="Vibrant Plants">
       </div>
     </div>
   </div>
@@ -228,10 +229,8 @@
 
  <!-- Placeholder Image for No Products -->
  <div class="no-products">
-  <img src="images/image.png" alt="No products available">
-  </div>
-
-
+  <img src="images/nothingToShow.png" alt="No products available">
+</div>
   <div class="shopping-grid">
     <!-- Product Card Start -->
     <div class="product-card bestseller indoor sale visible">
@@ -527,7 +526,50 @@
      </div>
    </section>
       <!-- KNOW MORE ABOUT PLANTS ENDS HERE -->
-     <div class="test"></div>
+    
+     <!-- Modal Structure -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-img">
+      <img src="https://img.freepik.com/premium-vector/register-now-label-with-megaphone-badge-registration_349999-1466.jpg">
+    </div>
+    <div class="modal-header"><h3><strong>Register To Continue</strong></h3></div>
+    <div class="modal-body"><strong>You are not a registered customer. Please sign in or sign up to continue.</strong></div>
+    <div class="modal-buttons">
+      <button class="modal-button signin-button" onclick="signIn()">Sign In</button>
+      <button class="modal-button signup-button" onclick="signUp()">Sign Up</button>
+  
+    </div>
+  </div>
+</div>
+<!-- COMMENT SECTION START -->
+<section class="comment-section">
+  <div class="contact-form">
+    <h2>Comment Us</h2>
+    <p>You will hear from us at the earliest!</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="8fe0cc59-6978-460f-9dc2-f9e78e9def88">
+        <div class="input-container">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Full Name</label>
+        </div>
+        <div class="input-container">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="input-container">
+            <textarea id="comments" name="meassage" required></textarea>
+            <label for="comments">Any comment or your query</label>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+    <p class="contact-number"> contact us at <em>thegreen@myyahoo.com</em></p>
+</div>
+</section>
+<!-- COMMENT SECTION END -->
+<div class="test"></div>
+
     <!-- EXTERNAL SRIPT LINK -->
     <script src="script.js"></script>
   </body>

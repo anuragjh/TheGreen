@@ -82,26 +82,24 @@
     transform: translateX(0);
   }
 }
-.header-menu
-{
+.header-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 25px;
 }
-.header-options{
+.header-options {
   padding: 7px;
   margin-right: 3px;
   cursor: pointer;
 }
-.header-options span
-{
+.header-options span {
   font-size: 2.5rem !important;
   color: #f8f8f8;
   transition: all ease-in 0.3s;
- &&:hover{
-  font-weight: 900;
- }
+  &&:hover {
+    font-weight: 900;
+  }
 }
 /* HEADER PART FOR LOGO CSS ENDS HERE */
 
@@ -193,7 +191,7 @@
   width: 40px;
   border-radius: 50%;
 }
-.navigation >button > span {
+.navigation > button > span {
   color: #02a58f;
 }
 .navigation button:hover {
@@ -276,6 +274,7 @@
 
 /* NAV-BAR STARTS HERE */
 .nav-container {
+  position: absolute;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -284,7 +283,7 @@
   height: 70px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background: #fff;
-  z-index: 2;
+  z-index: 500;
   transition: transform 0.5s ease;
 }
 .nav-options {
@@ -391,7 +390,7 @@
   text-align: center;
   flex: 1 1 150px;
 }
-.round-card >a{
+.round-card > a {
   text-decoration: none;
 }
 .round-card img {
@@ -403,8 +402,8 @@
   border-radius: 50%;
   transition: all ease 1s;
 }
-.round-card:hover img{
-  scale:1.2;
+.round-card:hover img {
+  scale: 1.2;
 }
 
 .round-card p {
@@ -540,19 +539,21 @@
 /* KNOW MORE ABOUT PLANTS ENDS HERE */
 
 /* SHOPPING SECTION STARTS HERE */
-.shopping-section{
+.shopping-section {
   max-width: 1850px;
   height: auto;
   margin: 20px auto;
   text-align: center;
   padding: 30px 20px;
+  background-color: #f8f8f8;
+  margin-bottom: 0px;
 }
 .shopping-header-section {
-  background-color: #f0fff6; 
+  background-color: #f0fff6;
   border-radius: 8px;
   margin: 20px auto;
   max-width: 1600px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .shopping-header {
@@ -570,14 +571,14 @@
 
 .shopping-text h2 {
   font-size: 1.5rem;
-  color: #2e7d32; 
+  color: #2e7d32;
   margin-bottom: 10px;
   font-family: Arial, sans-serif;
 }
 
 .shopping-text h1 {
   font-size: 2.5rem;
-  color: #1b5e20; 
+  color: #1b5e20;
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
 }
@@ -604,21 +605,21 @@
 .shopping-image img {
   width: 100%;
   object-fit: contain;
-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483));
 }
 
 /* DROPDOWN MENU STYLES */
 .dropdown {
   position: relative;
   display: inline-block;
- margin-top: 10px;
- width: 100px;
+  margin-top: 10px;
+  width: 100px;
   float: right;
   right: 7%;
 }
 
 .dropbtn {
-  background-color: #4caf50; 
+  background-color: #4caf50;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -688,7 +689,7 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #ffeb3b; 
+  background-color: #ffeb3b;
   color: #000;
   padding: 5px 10px;
   font-size: 0.875rem;
@@ -714,13 +715,13 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
 }
 
 .rating-stars {
-  color: #ffb400; 
+  color: #ffb400;
   margin-right: 5px;
 }
 
 .rating-value {
   font-size: 0.875rem;
-  color: #4caf50; 
+  color: #4caf50;
 }
 
 .product-price {
@@ -735,13 +736,13 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
 }
 
 .discounted-price {
-  color: #4caf50; 
+  color: #4caf50;
 }
 
 .product-button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50; 
+  background-color: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -751,7 +752,7 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
 }
 
 .product-button:hover {
-  background-color: #388e3c; 
+  background-color: #388e3c;
 }
 
 .product-card:hover {
@@ -762,7 +763,6 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
 .view-more-container {
   text-align: center;
   margin: 20px 0;
-
 }
 
 .view-more-button {
@@ -771,7 +771,7 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #4caf50; 
+  background-color: #4caf50;
   color: white;
 }
 
@@ -808,11 +808,9 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
   margin-top: 10px;
 }
 
-
 /* SHOPPING GRID ENDS HERE */
 
 /* SHOPPING SECTION ENDS HERE */
-
 
 /* Additional Services Section Starts header */
 .additional-services {
@@ -821,7 +819,8 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
   align-items: center;
   padding: 20px;
   background-color: #f9f9f9;
-  margin-top: 40px;
+  margin-top: 0px;
+  border-top:0.1px solid rgba(0, 0, 0, 0.465) ;
 }
 
 .service-item {
@@ -839,6 +838,204 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.483) );
   color: #333;
 }
 /* Additional Services Section End */
-.test {
+
+/* Comment Section */
+.comment-section{
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin-top:100px ;
+  background: linear-gradient(135deg,#4caf4f59 0%, #388e3c1b 100%);
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+.input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #aaa;
+  transition:all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input:focus + label,
+.input-container input:valid + label,
+.input-container textarea:focus + label,
+.input-container textarea:valid + label {
+  top: -13px;
+  left: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+button {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+button:hover {
+  background: #019a76;
+}
+
+.contact-number {
+  margin-top: 15px;
+  color: #666;
+}
+.test{
   height: 900px;
 }
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15% auto;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.modal-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 180px;
+  object-fit: cover;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Modal Header */
+.modal-header {
+  font-size: 24px;
+  margin: 15px;
+  color: #000000; 
+
+}
+
+/* Modal Body */
+.modal-body {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #888;
+  left: 18px;
+}
+
+/* Close Button */
+.close {
+  z-index: 1;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Buttons */
+.modal-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.signin-button {
+  background-color: #4caf50; 
+  color: white;
+}
+
+.signin-button:hover {
+  background-color:  #388e3c; 
+}
+
+.signup-button {
+  background-color:#4c99af; 
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #007bb5; 
+}
+

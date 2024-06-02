@@ -148,4 +148,38 @@ const products = document.querySelectorAll('.product-card');
     } else {
       noProductsElement.style.display = 'none';
     }
+}
+  
+// Function to open the modal
+function openModal() {
+  document.getElementById("authModal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("authModal").style.display = "none";
+}
+
+// Placeholder functions for sign-in and sign-up actions
+function signIn() {
+  alert("Redirecting to Sign In page...");
+  // Add your redirection logic here
+}
+
+function signUp() {
+  alert("Redirecting to Sign Up page...");
+  // Add your redirection logic here
+}
+
+// Event listener for 'Add to Cart' button
+document.querySelectorAll(".product-button").forEach(button => {
+  button.addEventListener("click", openModal);
+});
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById("authModal");
+  if (event.target == modal) {
+    closeModal();
   }
+}
